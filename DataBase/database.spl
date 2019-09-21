@@ -1,14 +1,16 @@
-CREATE DATABASE ng_usuario_db:
-
+CREATE DATABASE ng_usuario_db;
 
 USE ng_usuario_db;
-CREATE TABLE usuario(
-    id INT(11) NOT AUTO_INCLEMENT PRIMARY KEY,
+
+CREATE TABLE usuario (
+    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(180),
     apellidos VARCHAR(180),
-    correo VARCHAR(180),
-    imagen VARCHAR(200),
-    create_ap TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    correo VARCHAR(255),
+    image VARCHAR(200),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
 RENAME TABLE usuario to usuarios;
-DESCRIBE usuarios; 
+
+DESCRIBE usuarios;
