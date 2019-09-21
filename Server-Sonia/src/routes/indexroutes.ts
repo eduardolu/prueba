@@ -1,5 +1,10 @@
 import { Router } from 'express';
 
+import{ indexController} from '../controllers/indexcontroller';
+
+
+import { fromCallback } from 'bluebird';
+
 class Indexroutes {
 
     public router: Router = Router();
@@ -9,7 +14,7 @@ class Indexroutes {
     }
 
     config() : void {
-        this.router.get('/',(req,res) =>res.send('hello'));
+        this.router.get('/',indexController.index);
     }
 
 }

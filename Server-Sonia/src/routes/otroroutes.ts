@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import usuarioController from '../controllers/usuarioController';
 
 class Otroroutes {
 
@@ -9,7 +10,7 @@ class Otroroutes {
     }
 
     config() : void {
-        this.router.get('/',(req,res) =>res.send('otros'));
+        this.router.get('/',usuarioController.index);
     }
 
 }
