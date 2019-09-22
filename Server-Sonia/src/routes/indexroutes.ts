@@ -3,6 +3,7 @@ import { Router } from 'express';
 import{ indexController} from '../controllers/indexcontroller';
 
 import { fromCallback } from 'bluebird';
+import usuarioController from '../controllers/usuarioController';
 
 class Indexroutes {
 

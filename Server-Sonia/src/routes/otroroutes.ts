@@ -11,6 +11,10 @@ class Otroroutes {
 
     config() : void {
         this.router.get('/',usuarioController.index);
+        this.router.get('/:id',usuarioController.getOne);
+        this.router.post('/',usuarioController.create);
+        this.router.put('/:id',usuarioController.update); 
+        this.router.delete('/:id',usuarioController.delete);
     }
 
 }

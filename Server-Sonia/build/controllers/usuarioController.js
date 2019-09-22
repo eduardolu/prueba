@@ -1,14 +1,21 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-// import bd from '../dataBase';
-const dataBase_1 = __importDefault(require("../dataBase"));
 class UsuarioController {
     index(req, res) {
-        dataBase_1.default.query("Hola");
-        res.send('usuario');
+        //pool.query("DESCRIBE usuarios");
+        res.json('usuarios');
+    }
+    getOne(req, res) {
+        res.json({ text: 'sacar usuario ' + req.params.id });
+    }
+    create(req, res) {
+        res.json({ text: 'crear usuario' });
+    }
+    delete(req, res) {
+        res.json({ text: 'eliminar ' + req.params.id });
+    }
+    update(req, res) {
+        res.json({ test: 'Actualizar ' + req.params.id });
     }
 }
 const usuarioController = new UsuarioController();
