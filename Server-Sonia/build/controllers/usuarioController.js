@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const dataBase_1 = __importDefault(require("../dataBase"));
 class UsuarioController {
     index(req, res) {
-        //pool.query("DESCRIBE usuarios");
+        dataBase_1.default.query('DESCRIBE usuarios');
         res.json('usuarios');
     }
     getOne(req, res) {
@@ -23,13 +23,7 @@ class UsuarioController {
     }
     create(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const result = yield dataBase_1.default.query('INSERT INTO games set ?', [req.body]);
-            res.json({ message: 'Game Saved' });
-        });
-    }
-    create2(req, res) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const result = yield dataBase_1.default.query('INSERT INTO usuarios set ?', [req.body]);
+            //const result = await pool.query('INSERT INTO usuarios set ?', [req.body]);
             //console.log(req.body);
             res.json({ message: 'usuario Saved' });
         });
