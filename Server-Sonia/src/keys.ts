@@ -7,5 +7,4 @@ export default {
         database : 'ng_usuario_db',
         port: 3306
     }
-    
 }
